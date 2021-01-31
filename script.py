@@ -14,10 +14,10 @@ def turn_device_off():
     while attempts < 3:
         question = '🤖: wanna turn this laptop off? '
         turn_off = input(question)
-        if turn_off == 'no' or turn_off == 'n':
+        if turn_off in ['no', 'n', 'NO', 'N']:
             print('🤖: oh, ok -- bye!')
             exit()
-        elif turn_off == 'yes' or turn_off == 'y':
+        elif turn_off in ['yes', 'y', 'YES', 'Y']:
             print('🤖: coolio, enter your password and i\'ll do the rest.')
             os.system('sudo shutdown -r now')
         else:
